@@ -5,8 +5,8 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   consumption.associate = function(models) {
     // associations can be defined here
-    consumption.hasMany(models.user);
-    consumption.hasMany(models.app);
+    consumption.belongsTo(models.user);
+    consumption.belongsTo(models.app);
   };
   return consumption;
 };
