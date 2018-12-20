@@ -5,7 +5,6 @@ module.exports = (sequelize, DataTypes) => {
     email: DataTypes.STRING,
     passwordHash: DataTypes.STRING,
     score: DataTypes.INTEGER,
-    consumption: DataTypes.INTEGER,
     isActive: DataTypes.BOOLEAN
   }, {});
   user.associate = function(models) {
@@ -15,9 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     user.belongsToMany(models.fact, {
       through: "fact_user"
     })
-    user.belongsToMany(models.app, {
-      through: "app_user"
-    })
+    user.belongsTo(models.consumption);
   };
   return user;
 };
