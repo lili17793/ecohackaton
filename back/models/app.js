@@ -4,9 +4,7 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.STRING
   }, {});
   app.associate = function(models) {
-    app.belongsToMany(models.user, {
-      through: "app_user"
-    })
+    app.belongsTo(models.consumption);
   };
   return app;
 };
