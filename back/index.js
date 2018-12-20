@@ -10,18 +10,5 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(morgan('dev'));
 
-app.route('/')
-    .get((req, res) => {
-        
-    })
-    .post((req, res) => {
-        
-    })
-    .put((req, res) => {
-        
-    })
-    .delete((req, res) => {
-        
-    })
 
 app.listen(port, console.log(`server listening on port ${port}`));
