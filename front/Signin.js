@@ -1,5 +1,13 @@
 import React from "react";
-import { StyleSheet, Text, View, Alert, Button, Image, TextInput } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Alert,
+  Button,
+  Image,
+  TextInput
+} from "react-native";
 
 // import PropTypes from "prop-types";
 // import { withStyles } from "@material-ui/core/styles";
@@ -23,36 +31,39 @@ export default class Signin extends React.Component {
   }
 
   render() {
-
     return (
-
       <View style={styles.container}>
-      <Image source={require('./assets/logo.jpg')} style={{width: 193, height: 110}}/>
-        <Text>Email</Text>
+        <Image
+          source={require("./assets/logo.jpg")}
+          style={{ width: 193, height: 110 }}
+        />
+        <Text style={styles.textConnection}>Email</Text>
         <TextInput
-          style={{height: 40}}
+          style={styles.inputConnection}
           placeholder="monemail@gmail.com"
-          onChangeText={(text) => this.setState({text})}
+          onChangeText={text => this.setState({ text })}
           type="emailAddress"
         />
-        <Text>Mot de passe</Text>
+        <Text style={styles.textConnection}>Mot de passe</Text>
         <TextInput
-          style={{height: 40}}
+          style={styles.inputConnection}
           placeholder="azerty"
-          onChangeText={(text) => this.setState({text})}
+          onChangeText={text => this.setState({ text })}
           textContentType="password"
         />
         <Button
-          title="Connexion" 
+          title="Connexion"
           onPress={this.handleClickConnection}
           color="#2B86BB"
         />
-        <Button
-          title="Pas encore inscrit ?" 
-          onPress={this.handleClickGoLogin}
-          color="#2B86BB"
-          style={{marginTop: "20px"}}
-        />
+        <View style={styles.buttonNotSuscribedYet}>
+          <Button
+            title="Je m'inscris !"
+            onPress={this.handleClickGoLogin}
+            color="#2B86BB"
+          />
+        </View>
+        <Text style={styles.forgottenPassword}>Mot de passe oublié ?</Text>
       </View>
     );
   }
@@ -64,5 +75,27 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center"
+  },
+  buttonNotSuscribedYet: {
+    marginTop: 10
+  },
+  forgottenPassword: {
+    marginTop: 20,
+    color: "#D3D3D3",
+  },
+  inputConnection: {
+    height: 40,
+    width: 275,
+    // borderWidth: 1,
+    // borderColor: "red",
+    // borderStyle: "dashed"
+    // border: '1px solid red'
+  },
+  textConnection: {
+    width: 275,
+    // borderWidth: 1,
+    // borderColor: "blue",
+    // borderStyle: "dashed"
+    // border: '1px solid red'
   }
 });

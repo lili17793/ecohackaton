@@ -23,28 +23,31 @@ import Signup from "./Signup";
 //   },
 // });
 
+const styles = StyleSheet.create({
+  scrollViewContainer: {
+    backgroundColor: "#fff",
+  },
+  container: {
+    flex: 1,
+    backgroundColor: "#fff",
+    marginTop: 20,
+    alignItems: "center",
+    justifyContent: "center"
+  }
+});
+
 export default class App extends React.Component {
   handleClick() {
     Alert.alert("Hey");
   }
   render() {
     return (
-      <ScrollView
-      style={styles.container}
-      >
-        <Signin />
-        <Signup />
+      <ScrollView style={{backgroundColor: "blue"}}>
+        <View style={styles.container}>
+          <Signin />
+          {/* <Signup /> */}
+        </View>
       </ScrollView>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    marginTop: 20,
-    // alignItems: "center",
-    // justifyContent: "center"
-  }
-});
