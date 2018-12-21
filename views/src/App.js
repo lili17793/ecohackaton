@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Route } from 'react-router-dom';
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core";
 import "./App.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -32,9 +33,10 @@ class App extends Component {
     return (
       <MuiThemeProvider theme={theme}>
         <div className="App">
-          <AppBarHeader />
-          <Signin />
-          <AppBarFooter />
+          {/* <AppBarHeader /> */}
+          <Route exact path="/connexion" component={Signin} />
+          {/* <Route exact path="/inscription" component={Signup} /> */}
+          {/* <AppBarFooter /> */}
         </div>
       </MuiThemeProvider>
     );

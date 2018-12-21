@@ -15,10 +15,13 @@ const styles = theme => ({
     flexWrap: "wrap"
   },
   logo: {
-    height: 90,
+    height: 110,
     width: "auto",
-    marginTop: 30,
+    marginTop: 80,
     // border: "2px solid pink"
+  },
+  connectionFields: {
+    marginTop: 20,
   },
   textField: {
     marginLeft: theme.spacing.unit,
@@ -36,7 +39,7 @@ const styles = theme => ({
     // border: "2px solid pink"
     display: "flex",
     flexDirection: "column",
-    marginTop: 28,
+    marginTop: 45,
     // alignItems: "center"
     // justifyContent: "center",
   },
@@ -56,7 +59,8 @@ class Signin extends Component {
     return (
       <div className={classes.signin}>
         <img src={logoColor} alt="logo oko" className={classes.logo} />
-        <TextField
+        <div className={classes.connectionFields}>
+<TextField
           id="pseudoField"
           label="Pseudo"
           placeholder="Mon pseudo"
@@ -71,6 +75,7 @@ class Signin extends Component {
           margin="normal"
           type="password"
         />
+        </div>
         <div className={classes.connectionButtons}>
           <Button className={classes.connectionButton}>C'est parti !</Button>
           <Button className={classes.connectionButton}>Je m'inscris</Button>
