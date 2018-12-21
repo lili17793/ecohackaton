@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { withStyles } from "@material-ui/core/styles";
+import { Route } from 'react-router-dom';
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core";
 import "./App.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -13,6 +14,8 @@ import AppBarHeader from "./components/AppBarHeader";
 import AppBarFooter from "./components/AppBarFooter";
 import Networks from "./components/Networks";
 import "typeface-roboto";
+import Signin from "./components/Signin";
+import Signup from "./components/Signup";
 
 library.add(faHome, faCrown, faEllipsisH);
 
@@ -47,6 +50,8 @@ class App extends Component {
         <div className="App">
           {isDisplayed && <AppBarHeader />}
           {isDisplayed && <div className={classes.frame} />}
+          <Route exact path="/connexion" component={Signin} />
+          <Route exact path="/inscription" component={Signup} />
           {/* <Networks /> */}
           {isDisplayed && <AppBarFooter />}
         </div>
