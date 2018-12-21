@@ -1,13 +1,12 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const challenge_user = sequelize.define('challenge_user', {
-    isActive: Boolean,
-    isValidated: Boolean,
+    isActive: {type: DataTypes.BOOLEAN, defaultValue: false},
+    isValidated:  {type: DataTypes.BOOLEAN, defaultValue: false}
   }, {});
   challenge_user.associate = function(models) {
-    // associations can be defined here
-    challenge_user.belongsTo(models.user);
-    challenge_user.belongsTo(models.challenge);
+    challenge_user.belongsTo(models.user, { constraints: true});
+    challenge_user.belongsTo(models.challenge, { constraints: true});
   };
   return challenge_user;
 };
