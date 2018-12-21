@@ -48,7 +48,7 @@ class App extends Component {
           <Route exact path="/" component={Signin} />
           <Route exact path="/inscription" component={Signup} />
           <Route exact path="/networks" component={Networks}/>
-          <Route exact path="/challenges" component={Challenge} />
+          <Route exact path="/defis" component={Challenge} />
         </div>
       </MuiThemeProvider>
     );

@@ -72,6 +72,7 @@ class Challenge extends Component {
     const { classes } = this.props;
     return (
       <div>
+
         <AppBarHeader />
         <Grid
           container
