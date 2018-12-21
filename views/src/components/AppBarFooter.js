@@ -4,7 +4,7 @@ import { AppBar, Toolbar, IconButton } from "@material-ui/core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import networkIcon from "../assets/network_icon.png"
 
-const iconSize = "2em"
+const iconSize = "1em"
 
 const styles = {
   footer: {
@@ -15,7 +15,7 @@ const styles = {
   },
   appBar: {
     background: "linear-gradient(45deg, #60c36f, #337dc9)",
-    height: 90,
+    height: 60,
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-around"

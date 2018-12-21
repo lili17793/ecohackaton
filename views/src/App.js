@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Route } from 'react-router-dom';
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core";
 import "./App.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -9,6 +10,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import AppBarHeader from "./components/AppBarHeader";
 import AppBarFooter from "./components/AppBarFooter";
+import Signin from "./components/Signin";
+import Signup from "./components/Signup";
 
 library.add(faHome, faCrown, faEllipsisH);
 
@@ -31,8 +34,10 @@ class App extends Component {
     return (
       <MuiThemeProvider theme={theme}>
         <div className="App">
-          <AppBarHeader />
-          <AppBarFooter />
+          {/* <AppBarHeader /> */}
+          <Route exact path="/connexion" component={Signin} />
+          <Route exact path="/inscription" component={Signup} />
+          {/* <AppBarFooter /> */}
         </div>
       </MuiThemeProvider>
     );
