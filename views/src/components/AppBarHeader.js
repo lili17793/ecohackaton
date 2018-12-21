@@ -7,14 +7,14 @@ import logo from "../assets/logo_white.png"
 const styles = {
     appBar: {
         background: 'linear-gradient(45deg, #60c36f, #337dc9)',
-        height: 100,
+        height: 90,
         width: "100%",
         margin: 0,
         display: "flex",
         alignItems: "center"
     },
     logo: {
-        height: 100,
+        height: 90,
         width: "auto",
         marginTop: 10
     }
