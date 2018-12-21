@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { withStyles } from "@material-ui/core/styles";
 import { Button, TextField } from "@material-ui/core";
 import logoColor from "../assets/logo_color.png";
+import { Link } from "react-router-dom";
 
 const styles = theme => ({
   signin: {
@@ -16,16 +17,16 @@ const styles = theme => ({
   logo: {
     height: 110,
     width: "auto",
-    marginTop: 80,
+    marginTop: 80
     // border: "2px solid pink"
   },
   connectionFields: {
-    marginTop: 20,
+    marginTop: 20
   },
   textField: {
     marginLeft: theme.spacing.unit,
     marginRight: theme.spacing.unit,
-    width: 230,
+    width: 230
     // border: "1px solid pink"
   },
   dense: {
@@ -38,17 +39,19 @@ const styles = theme => ({
     // border: "2px solid pink"
     display: "flex",
     flexDirection: "column",
-    marginTop: 45,
+    marginTop: 45
     // alignItems: "center"
     // justifyContent: "center",
   },
   connectionButton: {
     marginBottom: 20,
-    width: 230,
+    width: 230
   },
   forgottenPassWordText: {
-      color: "grey",
-      
+    color: "grey"
+  },
+  navLink: {
+    textDecoration: 'none'
   }
 });
 
@@ -59,24 +62,26 @@ class Signin extends Component {
       <div className={classes.signin}>
         <img src={logoColor} alt="logo oko" className={classes.logo} />
         <div className={classes.connectionFields}>
-<TextField
-          id="pseudoField"
-          label="Pseudo"
-          placeholder="Mon pseudo"
-          className={classes.textField}
-          margin="normal"
-        />
-        <TextField
-          id="passwordField"
-          label="Mot de passe"
-          placeholder="Mon mot de passe"
-          className={classes.textField}
-          margin="normal"
-          type="password"
-        />
+          <TextField
+            id="pseudoField"
+            label="Pseudo"
+            placeholder="Mon pseudo"
+            className={classes.textField}
+            margin="normal"
+          />
+          <TextField
+            id="passwordField"
+            label="Mot de passe"
+            placeholder="Mon mot de passe"
+            className={classes.textField}
+            margin="normal"
+            type="password"
+          />
         </div>
         <div className={classes.connectionButtons}>
-          <Button className={classes.connectionButton}>C'est parti !</Button>
+          <Link to="\networks" className={classes.navLink}>
+            <Button className={classes.connectionButton}>C'est parti !</Button>
+          </Link>
           <Button className={classes.connectionButton}>Je m'inscris</Button>
         </div>
         <p className={classes.forgottenPassWordText}>Mot de passe oublié ?</p>

@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { withStyles } from "@material-ui/core/styles";
 import { Grid, IconButton } from "@material-ui/core";
+import AppBarHeader from "./AppBarHeader";
+import AppBarFooter from "./AppBarFooter";
 
 const styles = {
   imgIcon: {
@@ -29,6 +31,7 @@ class Networks extends Component {
     const { classes } = this.props;
     return (
       <div className="Networks">
+        <AppBarHeader />
         <Grid container spacing={8}>
           {apps.map((app, index) => (
             <Grid key={index} item xs={4}>
@@ -42,6 +45,7 @@ class Networks extends Component {
             </Grid>
           ))}
         </Grid>
+        <AppBarFooter />
       </div>
     );
   }

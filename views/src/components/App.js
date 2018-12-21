@@ -16,7 +16,6 @@ import Networks from "./components/Networks";
 import "typeface-roboto";
 import Signin from "./components/Signin";
 import Signup from "./components/Signup";
-import Challenge from "./components/Challenge";
 
 library.add(faHome, faCrown, faEllipsisH);
 
@@ -45,7 +44,7 @@ const styles = {
 
 class App extends Component {
   render() {
-    // const { classes, isDisplayed } = this.props;
+    const { classes, isDisplayed } = this.props;
     return (
       <MuiThemeProvider theme={theme}>
         <div className="App">
@@ -54,8 +53,6 @@ class App extends Component {
           <Route exact path="/" component={Signin} />
           <Route exact path="/inscription" component={Signup} />
           <Route exact path="/networks" component={Networks}/>
-          <Route exact path="/challenges" component={Challenge} />
-          {/* <AppBarFooter /> */}
           {/* <Networks /> */}
           {/* {isDisplayed && <AppBarFooter />} */}
         </div>
