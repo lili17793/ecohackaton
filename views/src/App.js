@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import { withStyles } from "@material-ui/core/styles";
 import { Route } from 'react-router-dom';
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core";
 import "./App.css";
@@ -10,6 +12,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import AppBarHeader from "./components/AppBarHeader";
 import AppBarFooter from "./components/AppBarFooter";
+import Networks from "./components/Networks";
+import "typeface-roboto";
 import Signin from "./components/Signin";
 import Signup from "./components/Signup";
 
@@ -18,6 +22,9 @@ library.add(faHome, faCrown, faEllipsisH);
 const primaryBackground = "linear-gradient(45deg, #60c36f, #337dc9)";
 
 const theme = createMuiTheme({
+  typography: {
+    useNextVariants: true
+  },
   overrides: {
     MuiButton: {
       // Name of the component ⚛️ / style sheet
@@ -29,19 +36,35 @@ const theme = createMuiTheme({
   }
 });
 
+const styles = {
+  frame: {
+    marginTop: 150,
+  }
+};
+
 class App extends Component {
   render() {
+    const { classes, isDisplayed } = this.props;
     return (
       <MuiThemeProvider theme={theme}>
         <div className="App">
-          {/* <AppBarHeader /> */}
+          {isDisplayed && <AppBarHeader />}
+          {isDisplayed && <div className={classes.frame} />}
           <Route exact path="/connexion" component={Signin} />
           <Route exact path="/inscription" component={Signup} />
-          {/* <AppBarFooter /> */}
+          {/* <Networks /> */}
+          {isDisplayed && <AppBarFooter />}
         </div>
       </MuiThemeProvider>
     );
   }
 }
 
-export default App;
+const mapStateToProps = state => ({
+  isDisplayed: state.nav.isDisplayed
+});
+
+export default connect(
+  mapStateToProps,
+  null
+)(withStyles(styles)(App));
