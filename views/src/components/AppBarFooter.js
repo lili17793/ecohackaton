@@ -52,7 +52,7 @@ class Footer extends Component {
               </IconButton>
             </Link>
             {/* LINK A CHANGER !!!! */}
-            <Link to="/defis" className={classes.link}>
+            <Link to="/recompenses" className={classes.link}>
               <IconButton color="inherit">
                 <span className={classes.buttonIcon}>
                   <FontAwesomeIcon icon="crown" />

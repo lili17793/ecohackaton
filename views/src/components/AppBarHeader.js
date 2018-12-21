@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { withStyles } from "@material-ui/core/styles";
 import { AppBar, Toolbar } from "@material-ui/core";
 import logo from "../assets/logo_white.png";
-import { Link } from "react-router-dom";
 
 const styles = {
   header: {

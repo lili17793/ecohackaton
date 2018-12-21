@@ -157,7 +157,7 @@ class Challenge extends Component {
                     component="h2"
                     className={classes.realizedChallenge}
                   >
-                    Défi réalisé
+                    Valider le défi
                   </Typography>
                   <Typography
                     gutterBottom
@@ -201,78 +201,7 @@ class Challenge extends Component {
                   </Grid>
                   <Grid item>
                     <Button className={classes.challengeValidationButton}>
-                      Défi validé !
-                    </Button>
-                  </Grid>
-                </Grid>
-              </CardContent>
-            </Card>
-          </Grid>
-        </Grid>
-
-        {/* DEFI REALISE */}
-        <Grid
-          container
-          spacing={8}
-          justify="center"
-          className={classes.cardHeader}
-        >
-          <Grid item xs={10}>
-            <Card className={classes.card}>
-              <Grid container className={classes.cardHeader}>
-                <Grid item xs={2} />
-                <Grid item xs={8} className={classes.description}>
-                  <Typography
-                    gutterBottom
-                    variant="h5"
-                    component="h2"
-                    className={classes.realizedChallenge}
-                  >
-                    Défi réalisé
-                  </Typography>
-                  <Typography
-                    gutterBottom
-                    variant="h3"
-                    component="p"
-                    className={classes.challengeDuration}
-                  >
-                    Durée du défi : 1 journée
-                  </Typography>
-                  <Typography
-                    gutterBottom
-                    variant="h3"
-                    component="p"
-                    className={classes.challengeDuration}
-                  >
-                    12 points gagnés
-                  </Typography>
-                </Grid>
-                <Grid item xs={2}>
-                  <img
-                    src={Snapchat}
-                    alt="logo Snapchat"
-                    className={classes.networkIcon}
-                  />
-                </Grid>
-              </Grid>
-              <CardContent>
-                <Grid
-                  container
-                  direction="column"
-                  justify="center"
-                  alignItems="center"
-                >
-                  <Grid item>
-                    <Typography
-                      component="p"
-                      className={classes.realizedChallenge}
-                    >
-                      Limite le nombre de tes stories à 5 par jour
-                    </Typography>
-                  </Grid>
-                  <Grid item>
-                    <Button className={classes.challengeValidationButton}>
-                      Défi validé !
+                      Défi déjà validé !
                     </Button>
                   </Grid>
                 </Grid>
