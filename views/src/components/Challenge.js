@@ -7,6 +7,7 @@ import PropTypes from "prop-types";
 import Grid from "@material-ui/core/Grid";
 import Gmail from "../assets/app_icons/color/gmail.png";
 import Snapchat from "../assets/app_icons/color/snapchat.png";
+import "./Networks.css"
 
 const styles = theme => ({
   card: {
@@ -84,7 +85,7 @@ class Challenge extends Component {
               <Grid container spacing={0} className={classes.cardHeader}>
                 <Grid item xs={2} />
                 <Grid item xs={8} className={classes.description}>
-                  <Typography gutterBottom variant="h5" component="h2">
+                  <Typography gutterBottom variant="h5" component="h2" className="typoGradient">
                     Défi du moment
                   </Typography>
                   <Typography
@@ -157,7 +158,7 @@ class Challenge extends Component {
                     component="h2"
                     className={classes.realizedChallenge}
                   >
-                    Valider le défi
+                    Défi validé
                   </Typography>
                   <Typography
                     gutterBottom
