@@ -2,14 +2,12 @@ import React, { Component } from "react";
 import { withStyles } from "@material-ui/core/styles";
 import { Button, TextField } from "@material-ui/core";
 import logoColor from "../assets/logo_color.png";
-import { Link } from "react-router-dom";
 
 const styles = theme => ({
-  signin: {
+  LogoPage: {
     display: "flex",
     flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center"
+    alignItems: "center"
   },
   container: {
     display: "flex",
@@ -18,13 +16,8 @@ const styles = theme => ({
   logo: {
     height: 110,
     width: "auto",
-    marginTop: 80
+    marginTop: 60
     // border: "2px solid pink"
-  },
-  connectionFields: {
-    display: 'flex',
-    flexDirection: "column",
-    marginTop: 20
   },
   textField: {
     marginLeft: theme.spacing.unit,
@@ -52,17 +45,14 @@ const styles = theme => ({
   },
   forgottenPassWordText: {
     color: "grey"
-  },
-  navLink: {
-    textDecoration: 'none'
   }
 });
 
-class Signin extends Component {
+class LogoPage extends Component {
   render() {
     const { classes } = this.props;
     return (
-      <div className={classes.signin}>
+      <div className={classes.LogoPage}>
         <img src={logoColor} alt="logo oko" className={classes.logo} />
         <div className={classes.connectionFields}>
           <TextField
@@ -73,6 +63,14 @@ class Signin extends Component {
             margin="normal"
           />
           <TextField
+            id="emailField"
+            label="Email"
+            placeholder="mon@email.com"
+            className={classes.textField}
+            margin="normal"
+            type="email"
+          />
+          <TextField
             id="passwordField"
             label="Mot de passe"
             placeholder="Mon mot de passe"
@@ -80,19 +78,21 @@ class Signin extends Component {
             margin="normal"
             type="password"
           />
+          <TextField
+            id="verifyPasswordField"
+            label="Confirmer le mot de passe"
+            placeholder="Mon mot de passe"
+            className={classes.textField}
+            margin="normal"
+            type="password"
+          />
         </div>
         <div className={classes.connectionButtons}>
-          <Link to="/defis" className={classes.navLink}>
-            <Button className={classes.connectionButton}>C'est parti !</Button>
-          </Link>
-          <Link to="/inscription" className={classes.navLink}>
           <Button className={classes.connectionButton}>Je m'inscris</Button>
-          </Link>
         </div>
-        <p className={classes.forgottenPassWordText}>Mot de passe oublié ?</p>
       </div>
     );
   }
 }
 
-export default withStyles(styles)(Signin);
+export default withStyles(styles)(LogoPage);
