@@ -11,6 +11,7 @@ import {
 import AppBarHeader from "./components/AppBarHeader";
 import AppBarFooter from "./components/AppBarFooter";
 import Signin from "./components/Signin";
+import Signup from "./components/Signup";
 
 library.add(faHome, faCrown, faEllipsisH);
 
@@ -35,7 +36,7 @@ class App extends Component {
         <div className="App">
           {/* <AppBarHeader /> */}
           <Route exact path="/connexion" component={Signin} />
-          {/* <Route exact path="/inscription" component={Signup} /> */}
+          <Route exact path="/inscription" component={Signup} />
           {/* <AppBarFooter /> */}
         </div>
       </MuiThemeProvider>
