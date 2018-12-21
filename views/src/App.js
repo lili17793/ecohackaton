@@ -8,10 +8,9 @@ import {
   faCrown,
   faEllipsisH
 } from "@fortawesome/free-solid-svg-icons";
-import AppBarHeader from "./components/AppBarHeader";
-import AppBarFooter from "./components/AppBarFooter";
 import Signin from "./components/Signin";
 import Signup from "./components/Signup";
+import Challenge from "./components/Challenge";
 
 library.add(faHome, faCrown, faEllipsisH);
 
@@ -37,6 +36,7 @@ class App extends Component {
           {/* <AppBarHeader /> */}
           <Route exact path="/connexion" component={Signin} />
           <Route exact path="/inscription" component={Signup} />
+          <Route exact path="/challenges" component={Challenge} />
           {/* <AppBarFooter /> */}
         </div>
       </MuiThemeProvider>
