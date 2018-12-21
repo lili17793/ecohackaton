@@ -62,7 +62,7 @@ class Challenge extends Component {
     const { classes } = this.props;
     return (
       <div>
-        <AppBarHeader />
+        {/* <AppBarHeader /> */}
         <Grid container spacing={8} justify="center" className={classes.cardHeader}>
           <Grid item xs={10}>
             <Card className={classes.card}>
@@ -96,7 +96,7 @@ class Challenge extends Component {
             </Card>
           </Grid>
         </Grid>
-        <AppBarFooter />
+        {/* <AppBarFooter /> */}
       </div>
     );
   }
