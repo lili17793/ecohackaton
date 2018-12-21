@@ -72,7 +72,6 @@ class Challenge extends Component {
     const { classes } = this.props;
     return (
       <div>
-
         <AppBarHeader />
         <Grid
           container
@@ -140,6 +139,7 @@ class Challenge extends Component {
           </Grid>
         </Grid>
 
+        {/* DEFI REALISE */}
         <Grid
           container
           spacing={8}
@@ -157,7 +157,7 @@ class Challenge extends Component {
                     component="h2"
                     className={classes.realizedChallenge}
                   >
-                    Défi réalisé
+                    Valider le défi
                   </Typography>
                   <Typography
                     gutterBottom
@@ -182,9 +182,6 @@ class Challenge extends Component {
                     alt="logo Snapchat"
                     className={classes.networkIcon}
                   />
-                  {/* <Avatar aria-label="Recipe" className={classes.avatar}>
-                  19
-                </Avatar> */}
                 </Grid>
               </Grid>
               <CardContent>
@@ -204,7 +201,7 @@ class Challenge extends Component {
                   </Grid>
                   <Grid item>
                     <Button className={classes.challengeValidationButton}>
-                      Défi validé !
+                      Défi déjà validé !
                     </Button>
                   </Grid>
                 </Grid>

@@ -45,7 +45,8 @@ const styles = theme => ({
   link: {
     display: "flex",
     flexDirection: "column",
-    marginTop: 20
+    marginTop: 20,
+    textDecoration: "none",
   },
   backToHome: {
     color: "grey"
@@ -92,10 +93,12 @@ class Signup extends Component {
           />
         </div>
         <div className={classes.connectionButtons}>
-          <Button>Je m'inscris</Button>
+          <Link to="/reseaux" className={classes.link}>
+            <Button>Je m'inscris</Button>
+          </Link>
         </div>
         <div className={classes.link}>
-          <Link to="\networks" className={classes.navLink}>
+          <Link to="/" className={classes.link}>
             <p className={classes.backToHome}>Revenir à la page d'accueil</p>
           </Link>
         </div>

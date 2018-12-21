@@ -82,10 +82,12 @@ class Signin extends Component {
           />
         </div>
         <div className={classes.connectionButtons}>
-          <Link to="\networks" className={classes.navLink}>
+          <Link to="/defis" className={classes.navLink}>
             <Button className={classes.connectionButton}>C'est parti !</Button>
           </Link>
+          <Link to="/inscription" className={classes.navLink}>
           <Button className={classes.connectionButton}>Je m'inscris</Button>
+          </Link>
         </div>
         <p className={classes.forgottenPassWordText}>Mot de passe oublié ?</p>
       </div>
