@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { connect } from "react-redux";
 import { withStyles } from "@material-ui/core/styles";
 import { Route } from 'react-router-dom';
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core";
@@ -10,8 +9,6 @@ import {
   faCrown,
   faEllipsisH
 } from "@fortawesome/free-solid-svg-icons";
-// import AppBarHeader from "./components/AppBarHeader";
-// import AppBarFooter from "./components/AppBarFooter";
 import Networks from "./components/Networks";
 import "typeface-roboto";
 import Signin from "./components/Signin";
@@ -45,30 +42,17 @@ const styles = {
 
 class App extends Component {
   render() {
-    // const { classes, isDisplayed } = this.props;
     return (
       <MuiThemeProvider theme={theme}>
         <div className="App">
-          {/* {isDisplayed && <AppBarHeader />}
-          {isDisplayed && <div className={classes.frame} />} */}
           <Route exact path="/" component={Signin} />
           <Route exact path="/inscription" component={Signup} />
           <Route exact path="/networks" component={Networks}/>
           <Route exact path="/challenges" component={Challenge} />
-          {/* <AppBarFooter /> */}
-          {/* <Networks /> */}
-          {/* {isDisplayed && <AppBarFooter />} */}
         </div>
       </MuiThemeProvider>
     );
   }
 }
 
-const mapStateToProps = state => ({
-  isDisplayed: state.nav.isDisplayed
-});
-
-export default connect(
-  mapStateToProps,
-  null
-)(withStyles(styles)(App));
+export default withStyles(styles)(App);

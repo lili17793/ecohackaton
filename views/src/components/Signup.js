@@ -2,12 +2,14 @@ import React, { Component } from "react";
 import { withStyles } from "@material-ui/core/styles";
 import { Button, TextField } from "@material-ui/core";
 import logoColor from "../assets/logo_color.png";
+import { Link } from "react-router-dom";
 
 const styles = theme => ({
   signup: {
     display: "flex",
     flexDirection: "column",
-    alignItems: "center"
+    alignItems: "center",
+    justifyContent: "center"
   },
   container: {
     display: "flex",
@@ -28,22 +30,24 @@ const styles = theme => ({
   dense: {
     marginTop: 19
   },
+  connectionFields: {
+    display: "flex",
+    flexDirection: "column"
+  },
   menu: {
     width: 200
   },
   connectionButtons: {
-    // border: "2px solid pink"
     display: "flex",
     flexDirection: "column",
     marginTop: 45
-    // alignItems: "center"
-    // justifyContent: "center",
   },
-  connectionButton: {
-    marginBottom: 20,
-    width: 230
+  link: {
+    display: "flex",
+    flexDirection: "column",
+    marginTop: 20
   },
-  forgottenPassWordText: {
+  backToHome: {
     color: "grey"
   }
 });
@@ -88,7 +92,12 @@ class Signup extends Component {
           />
         </div>
         <div className={classes.connectionButtons}>
-          <Button className={classes.connectionButton}>Je m'inscris</Button>
+          <Button>Je m'inscris</Button>
+        </div>
+        <div className={classes.link}>
+          <Link to="\networks" className={classes.navLink}>
+            <p className={classes.backToHome}>Revenir à la page d'accueil</p>
+          </Link>
         </div>
       </div>
     );

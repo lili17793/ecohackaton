@@ -5,7 +5,7 @@ import logo from "../assets/logo_white.png";
 
 const styles = {
   header: {
-    position: "fixed",
+    position: "static",
     zIndex: 1,
     top: 0,
     width: "100%",
