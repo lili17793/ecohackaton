@@ -8,7 +8,8 @@ const styles = theme => ({
   signin: {
     display: "flex",
     flexDirection: "column",
-    alignItems: "center"
+    alignItems: "center",
+    justifyContent: "center"
   },
   container: {
     display: "flex",
@@ -21,6 +22,8 @@ const styles = theme => ({
     // border: "2px solid pink"
   },
   connectionFields: {
+    display: 'flex',
+    flexDirection: "column",
     marginTop: 20
   },
   textField: {
