@@ -22,7 +22,7 @@ const styles = {
     height: 90,
     width: "auto",
     marginTop: 10
-  }
+  },
 };
 
 class Header extends Component {

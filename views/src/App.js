@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 import { withStyles } from "@material-ui/core/styles";
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core";
 import "./App.css";
@@ -35,25 +36,30 @@ const theme = createMuiTheme({
 const styles = {
   frame: {
     marginTop: 150,
-    marginBottom: 70
   }
 };
 
 class App extends Component {
   render() {
-    const { classes } = this.props;
+    const { classes, isDisplayed } = this.props;
     return (
       <MuiThemeProvider theme={theme}>
         <div className="App">
-          <AppBarHeader />
-          {/* <div className={classes.frame}>
-            <Networks />
-          </div> */}
-          <AppBarFooter />
+          {isDisplayed && <AppBarHeader />}
+          {isDisplayed && <div className={classes.frame} />}
+          {/* <Networks /> */}
+          {isDisplayed && <AppBarFooter />}
         </div>
       </MuiThemeProvider>
     );
   }
 }
 
-export default withStyles(styles)(App);
+const mapStateToProps = state => ({
+  isDisplayed: state.nav.isDisplayed
+});
+
+export default connect(
+  mapStateToProps,
+  null
+)(withStyles(styles)(App));
