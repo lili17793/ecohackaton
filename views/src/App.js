@@ -50,7 +50,7 @@ class App extends Component {
         <div className="App">
           {isDisplayed && <AppBarHeader />}
           {isDisplayed && <div className={classes.frame} />}
-          <Route exact path="/connexion" component={Signin} />
+          <Route exact path="/" component={Signin} />
           <Route exact path="/inscription" component={Signup} />
           {/* <Networks /> */}
           {isDisplayed && <AppBarFooter />}
