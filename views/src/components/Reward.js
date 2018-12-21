@@ -14,7 +14,8 @@ const styles = theme => ({
   },
   text: {
     fontSize: 20,
-    margin: 10,
+    marginLeft: 20,
+    marginRight: 20,
     marginTop: 50,
     textAlign: "center"
   }
@@ -32,7 +33,7 @@ class Reward extends Component {
           </Grid>
           <Grid xs={12} item>
             <Typography className={classes.text} variant="h5" component="h2">
-              Félicitations !<br/> Tu viens de passer niveau 2, Oko est fier de toi
+              Félicitations !<br/><br/> Tu viens de passer niveau 2,<br/> Oko est fier de toi :)
             </Typography>
           </Grid>
         </Grid>
