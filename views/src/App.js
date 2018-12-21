@@ -16,6 +16,7 @@ import Networks from "./components/Networks";
 import "typeface-roboto";
 import Signin from "./components/Signin";
 import Signup from "./components/Signup";
+import Challenge from "./components/Challenge";
 
 library.add(faHome, faCrown, faEllipsisH);
 
@@ -52,6 +53,8 @@ class App extends Component {
           {isDisplayed && <div className={classes.frame} />}
           <Route exact path="/" component={Signin} />
           <Route exact path="/inscription" component={Signup} />
+          <Route exact path="/challenges" component={Challenge} />
+          {/* <AppBarFooter /> */}
           {/* <Networks /> */}
           {isDisplayed && <AppBarFooter />}
         </div>
