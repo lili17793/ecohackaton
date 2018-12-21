@@ -44,7 +44,7 @@ const styles = {
 
 class App extends Component {
   render() {
-    // const { classes, isDisplayed } = this.props;
+    const { classes, isDisplayed } = this.props;
     return (
       <MuiThemeProvider theme={theme}>
         <div className="App">
