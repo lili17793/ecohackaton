@@ -9,8 +9,9 @@ router
   .route("/")
 
   .get((req, res) => {
-   const sql = 'SELECT c.name, c.description, c.duration FROM challenge c, challenge_user cu WHERE cu.isValidated=false OR c.id!=cu.challengeId';
-   
+    models.user
+      .findOne({ where: { id: req.params.id }, includes: [models.challenge] })
+      .then(user => res.json(user));
   });
 
 module.exports = router;
