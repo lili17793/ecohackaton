@@ -8,12 +8,16 @@ import baby from "../assets/Panda_1.png";
 
 const styles = theme => ({
   reward: {
-    width: 300,
-    height: 400,
-    marginTop: 200
+    width: 150,
+    height: 200,
+    marginTop: 50
   },
   text:{
-    marginTop:50
+    fontSize:20,
+    margin:10,
+    marginTop: 30,
+    textAlign:"center"
+
   }
 });
 
@@ -24,10 +28,10 @@ class Reward extends Component {
       <div className={classes.reward_container}>
         <AppBarHeader />
         <Grid container  direction="column" justify="center" alignItems="center">
-          <Grid item>
+          <Grid xs={12} item>
             <img className={classes.reward} alt="reward pic" src={baby} />
           </Grid>
-          <Grid item>
+          <Grid xs={12} item>
             <Typography className={classes.text} variant="h5" component="h2">
               Félicitation pour ton inscription ! Ton score est de zéro point.
               Relève nos défis et fais évoluer Oko
