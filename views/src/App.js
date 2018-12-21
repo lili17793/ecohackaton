@@ -9,6 +9,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import AppBarHeader from "./components/AppBarHeader";
 import AppBarFooter from "./components/AppBarFooter";
+import Signin from "./components/Signin";
 
 library.add(faHome, faCrown, faEllipsisH);
 
@@ -32,6 +33,7 @@ class App extends Component {
       <MuiThemeProvider theme={theme}>
         <div className="App">
           <AppBarHeader />
+          <Signin />
           <AppBarFooter />
         </div>
       </MuiThemeProvider>
