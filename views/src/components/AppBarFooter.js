@@ -48,11 +48,14 @@ class Footer extends Component {
                 <FontAwesomeIcon icon="home" />
               </span>
             </IconButton>
+      
             <IconButton color="inherit">
               <span className={classes.buttonIcon}>
                 <FontAwesomeIcon icon="crown" />
+                
               </span>
             </IconButton>
+            
             <IconButton color="inherit">
                 <img src={networkIcon} alt="Bouton réseau" className={classes.imgIcon}/>
             </IconButton>
