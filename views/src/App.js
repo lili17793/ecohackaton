@@ -14,6 +14,7 @@ import "typeface-roboto";
 import Signin from "./components/Signin";
 import Signup from "./components/Signup";
 import Challenge from "./components/Challenge";
+import Reward from "./components/Reward"
 
 library.add(faHome, faCrown, faEllipsisH);
 
@@ -49,6 +50,7 @@ class App extends Component {
           <Route exact path="/inscription" component={Signup} />
           <Route exact path="/networks" component={Networks}/>
           <Route exact path="/defis" component={Challenge} />
+          <Route exact path="/recompenses" component={Reward} />
         </div>
       </MuiThemeProvider>
     );
