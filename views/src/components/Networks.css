@@ -1,0 +1,44 @@
+.typoGradient {
+  display: table;
+  margin: 0 auto;
+  font-family: "Roboto Slab";
+  font-weight: 400;
+  font-size: 5em;
+  background: linear-gradient(
+    45deg,
+    #60c36f 0%,
+    #337dc9 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 200px;
+  /* background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(0, #6c7),
+    color-stop(0.15, #6c7),
+    color-stop(0.3, #6c7),
+    color-stop(0.45, #6c7),
+    color-stop(0.6, #38d),
+    color-stop(0.75, #38d),
+    color-stop(0.9, #38d),
+    color-stop(1, #38d)
+  );
+  background-image: gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(0, #6c7),
+    color-stop(0.15, #6c7),
+    color-stop(0.3, #6c7),
+    color-stop(0.45, #6c7),
+    color-stop(0.6, #38d),
+    color-stop(0.75, #38d),
+    color-stop(0.9, #38d),
+    color-stop(1, #38d)
+  );
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text; */
+}
