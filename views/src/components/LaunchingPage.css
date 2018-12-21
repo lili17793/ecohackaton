@@ -1,0 +1,18 @@
+.launchingPageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-flow: column nowrap;
+}
+
+.logo {
+    width: 160px;
+    padding-bottom: 35vh;
+}
+
+.panda {
+    width:250px;
+    padding-bottom: 15vh;
+
+}

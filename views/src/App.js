@@ -14,7 +14,8 @@ import "typeface-roboto";
 import Signin from "./components/Signin";
 import Signup from "./components/Signup";
 import Challenge from "./components/Challenge";
-import Reward from "./components/Reward"
+import Reward from "./components/Reward";
+import LaunchingPage from "./components/LaunchingPage";
 
 library.add(faHome, faCrown, faEllipsisH);
 
@@ -46,7 +47,8 @@ class App extends Component {
     return (
       <MuiThemeProvider theme={theme}>
         <div className="App">
-          <Route exact path="/" component={Signin} />
+          <Route exact path="/" component={LaunchingPage} />
+          <Route exact path="/connexion" component={Signin} />
           <Route exact path="/inscription" component={Signup} />
           <Route exact path="/reseaux" component={Networks}/>
           <Route exact path="/defis" component={Challenge} />
